@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>BMI簡単計算アプリ</h2><br>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+    <p>あなたの身長(cm): <input type="number" id="height"></p>
+    <p>あなたの体重(kg): <input type="number" id="weight"></p>
+    <p><input type="button" value=">>>>>>>>>BMI計算をする<<<<<<<<<" onclick="calc();"></p><br>
+    <p>~計算式~</p>
+    <p>BMI=体重kg÷(身長ｍ)²</p>
+    <p>適正体重＝(身長ｍ)²×22</p><br>
+
+    <p>ーー日本肥満学会の判定基準ーー</p>
+    <p>指標：判定</p>
+    <p>18.5未満：低体重(痩せ型)</p>
+    <p>18.5~25未満：普通体重</p>
+    <p>25~30未満：肥満(1度)</p>
+    <p>30~35未満：肥満(2度)</p>
+    <p>35~40未満：肥満(3度)</p>
+    <p>40以上：肥満(4度)</p>
+    <script type="text/javascript">
+      function calc(){
+        var h = Number(document.getElementById("height").value);
+        var w = Number(document.getElementById("weight").value);
+        alert( w / ( (h / 100) * (h / 100) ) );
+      }
+
+     </script>
+   </body>
+</html>
